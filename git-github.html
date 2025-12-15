@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git &amp; GitHub Tutorial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="project-name">Git &amp; GitHub</h1>
+    <p class="project-tagline">Version control and collaboration</p>
+  </header>
+  <main class="main-content">
+    <h1>What are Git and GitHub?</h1>
+    <p>
+      <strong>Git</strong> is a distributed version‑control system that records
+      snapshots of your code over time. You work in a local copy of your
+      repository, stage changes with <code>git add</code> and record a snapshot (a
+      <em>commit</em>) with <code>git commit</code>. Git also lets you branch and
+      merge your project history.
+    </p>
+    <p>
+      <strong>GitHub</strong> is a cloud platform that hosts Git repositories and
+      adds collaboration features. GitHub’s <em>pull‑request</em> workflow helps
+      teams propose, review and merge changes. The official “Hello World” guide
+      teaches how to create a repository, create a branch, commit changes and
+      open a pull request【778979557977785†L166-L175】.
+    </p>
+
+    <h2>GitHub’s pull‑request workflow</h2>
+    <p>GitHub’s quick‑start guide outlines these steps:</p>
+    <ol>
+      <li>
+        <strong>Create a repository</strong> – A repository is like a project
+        folder where you store files. When creating a new repository you can
+        include a README file and choose whether it is public or private【778979557977785†L185-L199】.
+      </li>
+      <li>
+        <strong>Create a branch</strong> – Branching lets you work on new
+        features independently of the main code. You can create additional
+        branches off of <code>main</code> and later merge them back【778979557977785†L224-L233】.
+      </li>
+      <li>
+        <strong>Make and commit changes</strong> – Edit files and then save
+        your changes as a commit. GitHub displays your changes and asks you to
+        write a commit message explaining what you did【778979557977785†L274-L289】.
+      </li>
+      <li>
+        <strong>Open a pull request (PR)</strong> – A PR proposes your
+        changes to others, shows the differences between branches and allows for
+        discussion and reviews【778979557977785†L291-L306】. When the PR is ready,
+        you can merge it into <code>main</code>【778979557977785†L309-L325】.
+      </li>
+    </ol>
+
+    <h2>Git basics: staging, committing and remotes</h2>
+    <p>
+      Git stores changes in a three‑stage process: the working directory, the
+      <em>staging area</em> and the commit history. You stage changes with
+      <code>git add</code> and commit them with <code>git commit</code>. The commit
+      message should explain the changes【67246901121458†L626-L689】. To
+      collaborate, you define <em>remote</em> repositories; when you clone from
+      GitHub, the remote is called <code>origin</code>. You can list remotes with
+      <code>git remote -v</code> and add new ones with
+      <code>git remote add &lt;name&gt; &lt;url&gt;</code>【906919906535863†L205-L224】.
+    </p>
+
+    <h2>Hands‑on example</h2>
+    <p>
+      Below is a simple sequence of commands you can run in a terminal to create
+      a new Git repository, add a file and commit it. Try these steps in a
+      practice directory on your own machine.
+    </p>
+    <pre><code># Create a new folder and initialize a Git repository
+mkdir demo_repo
+cd demo_repo
+git init
+
+# Create a README file
+echo "Hello Git!" &gt; README.md
+
+# Stage and commit the file
+git add README.md
+git commit -m "Initial commit"
+
+# View the commit history
+git log --oneline
+    </code></pre>
+
+    <h2>Further resources</h2>
+    <ul>
+      <li>
+        <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world"
+          >GitHub Docs – Hello World tutorial</a
+        >【778979557977785†L166-L175】
+      </li>
+      <li>
+        <a href="https://git-scm.com/book/en/v2" target="_blank"
+          >Pro&nbsp;Git book</a
+        > – comprehensive coverage of Git concepts【67246901121458†L626-L689】
+      </li>
+      <li>
+        <a href="https://learngitbranching.js.org/" target="_blank"
+          >Learn Git Branching</a
+        > – interactive exercises for exploring branches【780613595577623†L185-L194】
+      </li>
+      <li>
+        <a href="https://github.com/skills" target="_blank"
+          >GitHub Skills courses</a
+        > – free, hands‑on courses hosted on GitHub【780613595577623†L185-L194】
+      </li>
+    </ul>
+
+    <p>
+      <a href="index.html">Back to Home</a>
+    </p>
+  </main>
+  <footer class="site-footer">
+    <span>© 2025 – Tutorial site for demonstration purposes.</span>
+  </footer>
+</body>
+</html>
